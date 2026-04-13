@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="" >
+    <section class="todo-section" >
+        <h1 class="page-title">To-Do Card Page</h1>
+
+    <div class="Card-container" data-testid="test-todo-card">
+      <h3 class="task-title" data-testid="test-todo-title">Submit Report</h3>
+      <p class="task-description" data-testid="test-todo-description">
+        Prepare and submit the quarterly financial report to the management by
+        the end of the week.
+      </p>
+
+      <!-- -------BADGE-------- -->
+      <div class="priority-badge" data-testid="test-todo-priority">
+        <span class="priority-label">Priority:</span>
+        <span class="priority-value ">High</span>
+      </div>
+
+      <!-- --------DUE DATE-------- -->
+      <div class="due-date" data-testid="test-todo-due-date">
+        <span class="date-label">Due Date:</span>
+        <span class="date-value">2023-10-15</span>
+      </div>
+
+      <!-- -----------TIME REMAINING----------- -->
+      <div class="time-remaining">
+        <span class="time-label">Time Remaining:</span>
+        <span class="time-value" data-testid="test-todo-time-remaining"
+          >2 days</span
+        >
+      </div>
+
+      <!-- -----------STATUS INDICATOR----------- -->
+      <div class="">
+        <span class="status-label">Status:</span>
+        <span class="status-indicator" data-testid="test-todo-status"
+          >In Progress</span
+        >
+      </div>
+
+      <!-- ----------TO-DO Complete Toggle------------- -->
+
+      <input
+        type="checkbox"
+        name=""
+        id=""
+        data-testid="test-todo-complete-toggle"
+      />
+
+    <!-- --------Categories list---------  -->
+        <div class="categories-list">
+            <span class="categories-label">Categories:</span>
+            <ul class="categories" data-testid="test-todo-tags">
+            <li>Work</li>
+            <li>Personal</li>
+            <li>Urgent</li>
+            </ul>
+        </div>
+
+    </div>        
+    </section>
+
+  </body>
+</html>

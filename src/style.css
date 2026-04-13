@@ -29,3 +29,23 @@
   justify-content: center;
   align-items: center;
 }
+
+
+/* HTML: <div class="loader"></div> */
+.progress {
+  /* width: 120px; */
+  height: 20px;
+  background:
+   linear-gradient(#40916c 0 0) 0/0% no-repeat
+   #ddd;
+  animation: l1 2s 1 forwards;
+}
+@keyframes l1 {
+    100% {background-size:50%}
+}
+@keyframes l2 {
+    0% {background-size:50%}
+    100% {background-size:100%}
+}
+
+

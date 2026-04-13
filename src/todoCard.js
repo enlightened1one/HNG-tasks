@@ -4,20 +4,7 @@ const statusToggle = document.querySelector('#status_toggle');
 const statusIndicator = document.querySelector('#status');
 const progressLoader = document.querySelector('#progressLoader');
 
-function updateStatus() {
-    if (statusToggle.checked) {
-        statusIndicator.textContent = "Completed ✅";
-            //To Simulate theprogress completion
-        progressLoader.style.animation = "l2 2s 1 forwards";
-        dueDateElement.style.textDecoration = "line-through";
-        timeRemainingElement.style.textDecoration = "line-through";
-    } else {
-        statusIndicator.textContent = "In Progress";
-        progressLoader.style.animation = "l1 2s 1 forwards";
-        dueDateElement.style.textDecoration = "none";
-        timeRemainingElement.style.textDecoration = "none";
-    }
-}
+
 
 function calculateTimeRemaining(dueDate) {
   const currentDate = new Date();
@@ -35,6 +22,21 @@ const daysRemaining = calculateTimeRemaining(dueDateValue);
 
 // the final display including adding plural logic for day or days
 timeRemainingElement.textContent = `${daysRemaining} day${daysRemaining !== 1 ? 's' : ''}`;
+function updateStatus() {
+    if (statusToggle.checked) {
+        statusIndicator.textContent = "Completed ✅";
+            //To Simulate theprogress completion
+        progressLoader.style.animation = "l2 2s 1 forwards";
+        dueDateElement.style.textDecoration = "line-through";
+        timeRemainingElement.style.textDecoration = "line-through";
+    } else {
+        statusIndicator.textContent = "In Progress";
+        progressLoader.style.animation = "l1 2s 1 forwards";
+        dueDateElement.style.textDecoration = "none";
+        timeRemainingElement.style.textDecoration = "none";
+    }
+}
+
 
 statusToggle.addEventListener('change', updateStatus);
 

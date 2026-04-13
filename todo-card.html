@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body class="">
-    <section class="todo-section flex flex-col gap-4">
+    <main class="todo-section flex flex-col gap-4">
       <h1 class="page-title text-2xl font-semibold">To-Do Card Page</h1>
 
       <section
@@ -44,7 +44,11 @@
         <!-- --------DUE DATE-------- -->
         <div class="due-date flex flex-row justify-start w-full gap-2">
           <span class="date-label">Due Date:</span>
-          <time datetime="2026-05-15" data-testid="test-todo-due-date" id="dueDate" class="date-value"
+          <time
+            datetime="2026-05-15"
+            data-testid="test-todo-due-date"
+            id="dueDate"
+            class="date-value"
             >2026-5-15</time
           >
         </div>
@@ -64,7 +68,6 @@
             data-testid="test-todo-time-remaining"
           >
           </time>
-
         </div>
 
         <!-- -----------STATUS INDICATOR----------- -->
@@ -102,17 +105,27 @@
             class="categories flex flex-row justify-start items-center gap-2"
             data-testid="test-todo-tags"
           >
-            <li class="bg-[#ee9b00a6] outline outline-[#ee9b00] text-white rounded-full px-2 py-1">Work</li>
-            <li class="bg-[#3b83f68a] outline outline-[#3b83f6] text-white rounded-full px-2 py-1">
+            <li
+              class="bg-[#ee9b00a6] outline outline-[#ee9b00] text-white rounded-full px-2 py-1"
+            >
+              Work
+            </li>
+            <li
+              class="bg-[#3b83f68a] outline outline-[#3b83f6] text-white rounded-full px-2 py-1"
+            >
               Personal
             </li>
-            <li class="bg-[#f8717179] outline outline-[#f87171] text-white rounded-full px-2 py-1">
+            <li
+              class="bg-[#f8717179] outline outline-[#f87171] text-white rounded-full px-2 py-1"
+            >
               Urgent
             </li>
           </ul>
         </div>
 
-        <div class="buttons flex flex-row justify-start items-center gap-4 py-2 w-full">
+        <div
+          class="buttons flex flex-row justify-start items-center gap-4 py-2 w-full"
+        >
           <button
             data-testid="test-todo-edit-button"
             class="edit-button px-4 py-2 rounded-full bg-[#2563eb] text-white flex flex-row gap-2 items-center"
@@ -149,7 +162,7 @@
           </button>
         </div>
       </section>
-    </section>
+    </main>
     <script type="module" src="/src/todoCard.js"></script>
   </body>
 </html>

@@ -9,13 +9,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"), 
-        "todo-card": resolve(__dirname, "todo-card.html"), 
+        "todo-card": resolve(__dirname, "todo-card.html"),
+         "profile-card": resolve(__dirname, "profile-card.html"),
       },
     },
   },
 
   
   server: {
-    open: true, // auto-open browser in dev
+    open: true,
   },
 });

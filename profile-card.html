@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-6">
+
+  <article 
+    data-testid="test-profile-card"
+    class="bg-white rounded-3xl shadow-xl max-w-4xl w-full overflow-hidden">
+    
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 p-8 md:p-12">
+
+      <!-- Avatar Section -->
+      <div class="md:col-span-5 flex justify-center md:justify-start">
+        <figure class="text-center">
+          <img 
+            src="/nemi.jpg"
+            alt="Profile photo of Davies Nemi, a friendly software developer"
+            data-testid="test-user-avatar"
+            class="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover ring-8 ring-sky-100 shadow-lg"
+          >
+        </figure>
+      </div>
+
+      <!-- Content Section -->
+      <div class="md:col-span-7 space-y-8">
+
+        <!-- Name -->
+        <h1 
+          data-testid="test-user-name"
+          class="text-4xl font-bold text-slate-900">
+          Davies Nemi
+        </h1>
+
+        <!-- Live Time -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl px-5 py-3 inline-flex items-center gap-2">
+          <span class="text-sm text-slate-500 font-medium">Current time (ms):</span>
+          <span 
+            id="time-display"
+            data-testid="test-user-time"
+            class="font-mono text-slate-700 font-semibold">
+          </span>
+        </div>
+
+        <!-- Bio -->
+        <p 
+          data-testid="test-user-bio"
+          class="text-slate-600 leading-relaxed text-lg">
+          Passionate frontend developer who loves building delightful and accessible user experiences. 
+          Always exploring new technologies and passionate about clean, inclusive design.
+        </p>
+
+        <!-- Social Links -->
+        <nav aria-label="Social links">
+          <ul 
+            data-testid="test-user-social-links"
+            class="flex flex-wrap gap-6 text-lg">
+            <li>
+              <a href="https://twitter.com/alphawebstack" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 data-testid="test-user-social-twitter"
+                 class="text-sky-600 hover:text-sky-700 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded-lg px-1">
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/enlightened1one/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 data-testid="test-user-social-github"
+                 class="text-slate-700 hover:text-slate-900 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 rounded-lg px-1">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 data-testid="test-user-social-linkedin"
+                 class="text-blue-600 hover:text-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-1">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Hobbies -->
+        <section>
+          <h2 class="text-xl font-semibold text-slate-800 mb-4">Hobbies</h2>
+          <ul 
+            data-testid="test-user-hobbies"
+            class="grid grid-cols-2 gap-y-3 text-slate-600">
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500">✓</span> Coding
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500">✓</span> Photography
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500">✓</span> Hiking
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-500">✓</span> Reading Sci-Fi
+            </li>
+          </ul>
+        </section>
+
+        <!-- Dislikes -->
+        <section>
+          <h2 class="text-xl font-semibold text-slate-800 mb-4">Dislikes</h2>
+          <ul 
+            data-testid="test-user-dislikes"
+            class="grid grid-cols-2 gap-y-3 text-slate-600">
+            <li class="flex items-center gap-2">
+              <span class="text-rose-500">✕</span> Early morning meetings
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-rose-500">✕</span> Unresponsive designs
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-rose-500">✕</span> Overcooked pasta
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-rose-500">✕</span> Slow internet
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </article>
+
+  <script type="module" src="/src/profileCard.js"></script>
+</body>
+</html>

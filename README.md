@@ -1,6 +1,6 @@
-# 🧠 Advanced Todo Card (Stage 1A)
+#  Advanced Todo Card (Stage 1A)
 
-## 📌 Overview
+# Overview
 
 This project extends a basic Todo Card into a more interactive, stateful UI component.
 
@@ -8,19 +8,19 @@ The goal of Stage 1A is to simulate real-world UI behavior by introducing contro
 
 ---
 
-## 🚀 Live Demo
+# Live Demo
 
 👉 [https://hng-tasks-azure.vercel.app/]
 
 ---
 
-## 📂 Repository
+##  Repository
 
 👉 https://github.com/enlightened1one/HNG-tasks.git
 
 ---
 
-## 🔄 What Changed from Stage 0
+## What Changed from Stage 0
 
 Stage 0 was primarily static and DOM-driven. Stage 1A introduces structured state and interactive behavior.
 
@@ -37,11 +37,11 @@ Stage 0 was primarily static and DOM-driven. Stage 1A introduces structured stat
 
 ---
 
-## 🧠 Design Decisions
+## Design Decisions
 
 ### 1. State-Driven UI
 
-Instead of relying on the DOM as the source of truth, a `todoState` object is used.
+Instead of relying on the DOM as main source of "true" state, a `todoState` object is used.
 
 This allows:
 
@@ -53,13 +53,7 @@ This allows:
 
 ### 2. Single Render Function
 
-All UI updates are handled through a centralized `render()` function.
-
-Benefits:
-
-* Prevents UI inconsistencies
-* Keeps logic maintainable
-* Mimics modern frameworks like React
+All UI updates are handled through a centralized `render` function.
 
 ---
 
@@ -71,13 +65,13 @@ Status is controlled through:
 * Dropdown (status control)
 * Visual indicator
 
-All three are kept in sync through shared state.
+All three are kept synchronous through shared state.
 
 ---
 
 ### 4. Time Engine
 
-Time is dynamically calculated using JavaScript `Date`.
+Time is dynamic, and is calculated using JavaScript `Date` object.
 
 Features:
 
@@ -110,9 +104,9 @@ This ensures safe editing without unintended data loss.
 
 ---
 
-## 🎯 Features Implemented
+##  Features Implemented
 
-### ✅ Editable Content
+###  Editable Content
 
 * Title
 * Description
@@ -121,7 +115,7 @@ This ensures safe editing without unintended data loss.
 
 ---
 
-### ✅ Status Management
+###  Status Management
 
 * Pending
 * In Progress
@@ -135,7 +129,7 @@ Includes:
 
 ---
 
-### ✅ Priority Indicator
+### Prority Indicator
 
 Visual feedback based on priority:
 
@@ -145,7 +139,7 @@ Visual feedback based on priority:
 
 ---
 
-### ✅ Expand / Collapse
+### Expand / Collapse
 
 * Toggle button
 * Keyboard accessible
@@ -153,7 +147,7 @@ Visual feedback based on priority:
 
 ---
 
-### ✅ Time Management
+### Time Management
 
 * Real-time updates
 * Granular display (minutes → days)
@@ -162,7 +156,7 @@ Visual feedback based on priority:
 
 ---
 
-### ✅ Visual State Changes
+### Visual State Changes
 
 * Done → strikethrough + muted styling
 * High priority → strong indicator
@@ -171,7 +165,7 @@ Visual feedback based on priority:
 
 ---
 
-## ♿ Accessibility Notes
+## Accessibility Notes
 
 * Semantic HTML (`section`, `time`, `button`)
 * `aria-expanded` used for collapsible content
@@ -186,16 +180,7 @@ Visual feedback based on priority:
 
 ---
 
-## ⚠️ Known Limitations
-
-* No persistence (state resets on reload)
-* Single card only (not scalable yet)
-* No animations for expand/collapse transitions
-* Focus trapping in edit mode is minimal (can be improved)
-
----
-
-## 🧪 Testing Considerations
+##  Testing Considerations
 
 All required `data-testid` attributes are implemented:
 
@@ -208,21 +193,11 @@ All required `data-testid` attributes are implemented:
 
 ---
 
-## 🔮 Future Improvements
-
-* Convert to React + TypeScript
-* Add localStorage or backend persistence
-* Support multiple todo cards
-* Improve animations and transitions
-* Add drag-and-drop prioritization
-
----
-
 ## 🧑‍💻 Author
 
 **NemiDev**
 
-Frontend Developer | UI/UX Enthusiast
+Frontend Developer
 
 ---
 

@@ -1,3 +1,237 @@
+# 🧠 Advanced Todo Card (Stage 1A)
+
+## 📌 Overview
+
+This project extends a basic Todo Card into a more interactive, stateful UI component.
+
+The goal of Stage 1A is to simulate real-world UI behavior by introducing controlled state, user interactions, and dynamic rendering — all within a single component.
+
+---
+
+## 🚀 Live Demo
+
+👉 [https://hng-tasks-azure.vercel.app/]
+
+---
+
+## 📂 Repository
+
+👉 https://github.com/enlightened1one/HNG-tasks.git
+
+---
+
+## 🔄 What Changed from Stage 0
+
+Stage 0 was primarily static and DOM-driven. Stage 1A introduces structured state and interactive behavior.
+
+### Major Improvements
+
+* Introduced a **central state object** to manage all todo data
+* Replaced static rendering with a **render() function**
+* Added **edit mode with save/cancel functionality**
+* Implemented **status transitions with bidirectional sync**
+* Upgraded **time handling to support minutes, hours, days, and overdue states**
+* Added **expand/collapse behavior for long descriptions**
+* Introduced **priority-based visual indicators**
+* Added **overdue detection and visual feedback**
+
+---
+
+## 🧠 Design Decisions
+
+### 1. State-Driven UI
+
+Instead of relying on the DOM as the source of truth, a `todoState` object is used.
+
+This allows:
+
+* Easier updates
+* Predictable rendering
+* Proper rollback (Cancel in edit mode)
+
+---
+
+### 2. Single Render Function
+
+All UI updates are handled through a centralized `render()` function.
+
+Benefits:
+
+* Prevents UI inconsistencies
+* Keeps logic maintainable
+* Mimics modern frameworks like React
+
+---
+
+### 3. Status Synchronization
+
+Status is controlled through:
+
+* Checkbox
+* Dropdown (status control)
+* Visual indicator
+
+All three are kept in sync through shared state.
+
+---
+
+### 4. Time Engine
+
+Time is dynamically calculated using JavaScript `Date`.
+
+Features:
+
+* Displays:
+
+  * “Due in X days”
+  * “Due in X hours”
+  * “Due in X minutes”
+  * “Overdue by X time”
+* Updates every 30–60 seconds
+* Stops updating when task is marked **Done**
+
+---
+
+### 5. Expand / Collapse Logic
+
+* Long descriptions are truncated by default
+* Users can toggle full visibility
+* Designed to improve readability and UX
+
+---
+
+### 6. Edit Mode Architecture
+
+* Entering edit mode creates a **snapshot of previous state**
+* Save → updates state
+* Cancel → restores previous state
+
+This ensures safe editing without unintended data loss.
+
+---
+
+## 🎯 Features Implemented
+
+### ✅ Editable Content
+
+* Title
+* Description
+* Priority
+* Due date
+
+---
+
+### ✅ Status Management
+
+* Pending
+* In Progress
+* Done
+
+Includes:
+
+* Checkbox sync
+* Dropdown control
+* Visual indicator updates
+
+---
+
+### ✅ Priority Indicator
+
+Visual feedback based on priority:
+
+* Low → subtle
+* Medium → moderate
+* High → strong (highlighted)
+
+---
+
+### ✅ Expand / Collapse
+
+* Toggle button
+* Keyboard accessible
+* Handles long descriptions gracefully
+
+---
+
+### ✅ Time Management
+
+* Real-time updates
+* Granular display (minutes → days)
+* Overdue detection
+* Completion state handling
+
+---
+
+### ✅ Visual State Changes
+
+* Done → strikethrough + muted styling
+* High priority → strong indicator
+* Overdue → red accent
+* In Progress → distinct style
+
+---
+
+## ♿ Accessibility Notes
+
+* Semantic HTML (`section`, `time`, `button`)
+* `aria-expanded` used for collapsible content
+* Form inputs are properly labeled
+* Keyboard accessibility for:
+
+  * Expand/collapse
+  * Form controls
+* Focus handling:
+
+  * Edit mode returns focus to Edit button
+
+---
+
+## ⚠️ Known Limitations
+
+* No persistence (state resets on reload)
+* Single card only (not scalable yet)
+* No animations for expand/collapse transitions
+* Focus trapping in edit mode is minimal (can be improved)
+
+---
+
+## 🧪 Testing Considerations
+
+All required `data-testid` attributes are implemented:
+
+* Edit form controls
+* Status control
+* Priority indicator
+* Expand toggle
+* Overdue indicator
+* Existing Stage 0 test IDs preserved
+
+---
+
+## 🔮 Future Improvements
+
+* Convert to React + TypeScript
+* Add localStorage or backend persistence
+* Support multiple todo cards
+* Improve animations and transitions
+* Add drag-and-drop prioritization
+
+---
+
+## 🧑‍💻 Author
+
+**NemiDev**
+
+Frontend Developer | UI/UX Enthusiast
+
+---
+
+
+
+
+===================================
+
+
 # Frontend Task 0 - To-Do Card
 
 A clean, modern To-Do Card built with **Vite**, vanilla HTML, CSS, and Tailwind CSS.
